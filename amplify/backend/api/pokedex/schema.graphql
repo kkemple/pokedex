@@ -1,0 +1,42 @@
+type Query {
+  listPokemon(limit: Int, nextToken: Int): PokemonConnection
+    @function(name: "listpokemon-${env}")
+  pokemon(id: Int): Pokemon @function(name: "getpokemon-${env}")
+}
+
+type PokemonConnection {
+  nextToken: Int
+  items: [Pokemon]
+}
+
+type Pokemon {
+  abilities: [PokemonAbility]!
+  baseExp: Int!
+  height: Int!
+  id: Int!
+  image: String!
+  moves: [PokemonMove]!
+  name: String!
+  weight: Int!
+}
+
+type PokemonMove {
+  id: String!
+  details: PokemonMoveDetails @function(name: "pokemonmovedetails-${env}")
+}
+
+type PokemonAbility {
+  id: String!
+  details: PokemonAbilityDetails @function(name: "pokemonabilitydetails-${env}")
+}
+
+type PokemonMoveDetails {
+  name: String!
+  flavorText: String!
+  effect: String!
+}
+
+type PokemonAbilityDetails {
+  name: String!
+  effect: String!
+}

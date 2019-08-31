@@ -1,0 +1,14 @@
+projects:
+  pokedex:
+    schemaPath: amplify/backend/api/pokedex/build/schema.graphql
+    includes:
+      - src/graphql/**/*.ts
+    excludes:
+      - ./amplify/**
+    extensions:
+      amplify:
+        codeGenTarget: typescript
+        generatedFileName: src/pokemon.ts
+        docsFilePath: src/graphql
+        region: us-east-1
+        maxDepth: 2
