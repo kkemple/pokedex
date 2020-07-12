@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import { AppLoading } from "expo";
 import * as Font from "expo-font";
-import { createStackNavigator, createAppContainer } from "react-navigation";
+import { createStackNavigator } from 'react-navigation-stack'
+import { createAppContainer } from "react-navigation";
 import Amplify from "aws-amplify";
 import { YellowBox } from "react-native";
 

@@ -62,8 +62,8 @@
 				"Runtime": "nodejs10.x",
 				"Timeout": "25",
 				"Code": {
-					"S3Bucket": "pokedex-dev-20190830185737-deployment",
-					"S3Key": "amplify-builds/getpokemon-66334e576b4659674d46-build.zip"
+					"S3Bucket": "amplify-pokedex-dev-150407-deployment",
+					"S3Key": "amplify-builds/getpokemon-552f4c557733534d6c75-build.zip"
 				}
 			}
 		},
